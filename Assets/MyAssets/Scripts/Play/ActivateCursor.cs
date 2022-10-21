@@ -5,12 +5,19 @@ using UnityEngine;
 public class ActivateCursor : MonoBehaviour
 {
     private bool canGrab;
+    public PauseMenuOptions _pauseMenuOptions;
 
     private void Update()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
+        _pauseMenuOptions = GameObject.Find("Setting canvas").GetComponent<PauseMenuOptions>();
+        if (!_pauseMenuOptions.gameIsPaused)
+        {
+            ChangeMouse();
+        }
+    }
 
+    void ChangeMouse()
+    {
         if (canGrab)
         {
             if (Input.GetMouseButtonDown(0))

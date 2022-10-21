@@ -21,8 +21,6 @@ public class TriggerOpenDoor2 : MonoBehaviour
                 isTriggered = true;
                 Render.SetActive(true);
                 PT.isOverlapping = true;
-
-                Debug.Log("IN");
             }
      
         }
@@ -36,8 +34,6 @@ public class TriggerOpenDoor2 : MonoBehaviour
             isTriggered = false;
             Render.SetActive(false);
             PT.isOverlapping = false;
-
-            Debug.Log("IN");
         }
     }
 

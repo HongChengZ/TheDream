@@ -8,7 +8,11 @@ public class SpawnRszObj : MonoBehaviour
     public GameObject Spawn;
     public int _RszID;
     private GameObject xxx;
-    bool isCreated = false;
+    public bool isCreated = false;
+    private void Start()
+    {
+        isCreated = false;
+    }
 
     private void OnTriggerEnter(Collider other)
     {

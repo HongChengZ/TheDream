@@ -39,7 +39,7 @@ public class Bomb : MonoBehaviour
         //62 % 60 = 1min2sec; 125 & 60 = 2min5sec; 46 % 60 = 46sec
         //float milliSeconds = (timeToDisplay % 1) * 1000;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.5f);
         timeIsRunning = true;
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }

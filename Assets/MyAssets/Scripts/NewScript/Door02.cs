@@ -9,12 +9,6 @@ public class Door02 : MonoBehaviour
     public GameObject Exit;
     public int NumTriggered=0;
     public int NumMax=2;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
 
     public void Check()
     {
@@ -24,9 +18,8 @@ public class Door02 : MonoBehaviour
         }
     }
 
-
     public void OpentheDoor()
     {
-        GetComponent<Animation>().Play();
+        this.gameObject.SetActive(false);
     }
 }

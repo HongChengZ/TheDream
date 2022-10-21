@@ -19,7 +19,7 @@ public class SceneLoadManager : MonoBehaviour
     void Start()
     {
         ActivateNormalCursor();
-        ValueTxt.text = PersistentManager.Instance.Value.ToString();
+        //ValueTxt.text = PersistentManager.Instance.Value.ToString();
     }
     public void ActivateNormalCursor()
     {

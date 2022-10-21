@@ -16,14 +16,10 @@ public class TriggerOpenDoor3 : MonoBehaviour
         {
             if (isTriggered == false)
             {
-
                 HitSound.Play();
-                Door.GetComponent<Door01>().OpentheDoor();
+                Door.SetActive(false);
                 isTriggered = true;
-                Debug.Log("IN");
             }
- 
-     
         }
     }
 
@@ -33,7 +29,6 @@ public class TriggerOpenDoor3 : MonoBehaviour
         {
             LeaveSound.Play();
             isTriggered = false;
-            Debug.Log("Out");
         }
     }
 

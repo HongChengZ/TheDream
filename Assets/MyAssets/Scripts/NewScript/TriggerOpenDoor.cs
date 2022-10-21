@@ -14,8 +14,7 @@ public class TriggerOpenDoor : MonoBehaviour
         if (other.tag == "Grabbable")
         {
             HitSound.Play();
-            Door.GetComponent<Door01>().OpentheDoor();
-            Debug.Log("IN");
+            Door.SetActive(false);
         }
     }
 
@@ -25,7 +24,6 @@ public class TriggerOpenDoor : MonoBehaviour
         {
             LeaveSound.Play();
             Debug.Log("Out");
-
         }
     }
 }

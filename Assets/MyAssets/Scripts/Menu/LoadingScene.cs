@@ -41,13 +41,20 @@ public class LoadingScene : MonoBehaviour
     public CanvasGroup canvasGroup;
     public void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-        loadingOperation = SceneManager.LoadSceneAsync(sceneToLoad);
+        //DontDestroyOnLoad(gameObject);   
     }
     public void Start()
     {
+        StartCoroutine(LoadingWait());
+        
+    }
+    IEnumerator LoadingWait()
+    {
+        yield return new WaitForSeconds(5f);
+        loadingOperation = SceneManager.LoadSceneAsync(sceneToLoad);
         StartGame();
     }
+
     public void StartGame()
     {
         progressBar.value = Mathf.Clamp01(loadingOperation.progress / 0.9f);
@@ -56,14 +63,15 @@ public class LoadingScene : MonoBehaviour
         
         if (loadingOperation.isDone)
         {
-            StartCoroutine(StartLoad());
+            loadingScreen.SetActive(false);
+            //StartCoroutine(StartLoad());
         }
     }
 
     IEnumerator StartLoad()
     {
         loadingScreen.SetActive(true);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(0.1f);
         
         yield return StartCoroutine(FadeLoadingScreen(1, 1));
         {

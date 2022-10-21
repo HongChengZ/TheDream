@@ -20,7 +20,7 @@ public class TracingPlates : MonoBehaviour
         {
             if (other.GetComponent<RszID>().ObjID == plateID)
             {               
-                StartCoroutine(ActivateLight(0, 15, 2));
+                //StartCoroutine(ActivateLight(0, 15, 2));
                 isMatched = true;
                 Validator.AddMatch();               
             }           
@@ -33,7 +33,7 @@ public class TracingPlates : MonoBehaviour
         {
             if (other.GetComponent<RszID>().ObjID == plateID)
             {
-                StartCoroutine(DisactivateLight());
+                //StartCoroutine(DisactivateLight());
                 isMatched = false;
                 Validator.MinusMatch();
             }

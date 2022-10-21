@@ -19,7 +19,6 @@ public class TriggerOpenDoor1 : MonoBehaviour
                 HitSound.Play();
                 isTriggered = true;
                 Door.GetComponent<Door02>().Check();
-                Debug.Log("IN");
             }
      
         }
@@ -32,7 +31,6 @@ public class TriggerOpenDoor1 : MonoBehaviour
             LeaveSound.Play();
             isTriggered = false;
             Door.GetComponent<Door02>().Check();
-            Debug.Log("IN");
         }
     }
 

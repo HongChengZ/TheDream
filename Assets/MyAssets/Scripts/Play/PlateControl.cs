@@ -10,13 +10,13 @@ public class PlateControl : MonoBehaviour
     public void AddMatch()
     {
         matchNumber += 1;
-        Debug.Log("Plus 1");
+        //Debug.Log("Plus 1");
         ValidatePressedOrder();
     }
     public void MinusMatch()
     {
         matchNumber -= 1;
-        Debug.Log("Minus 1");
+        //Debug.Log("Minus 1");
         ValidatePressedOrder();
     }
 
@@ -25,13 +25,12 @@ public class PlateControl : MonoBehaviour
 
         if (TracingPlates.Length == matchNumber)
         {
-            Debug.Log("Door open.");
-            //open the door
+            //Debug.Log("Door open.");
             door.SetActive(false);
         }
         else
         {
-            Debug.Log("Not complete.");
+            //Debug.Log("Not complete.");
         }
 
     }
